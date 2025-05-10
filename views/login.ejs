@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cric-Auction Login</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="login-card">
+    <h1>Cric-Auction</h1>
+
+    <!-- Username -->
+    <div class="form-group">
+      <input id="username" name="username" type="text" placeholder="Username" required>
+    </div>
+
+    <!-- Password + Forgot -->
+    <div class="form-group">
+      <input id="password" name="password" type="password" placeholder="Password" required>
+      <a href="/forgot" class="forgot">Forgot?</a>
+    </div>
+
+    <!-- Primary Login -->
+    <form action="/login-fallback" method="POST">
+      <button type="submit" class="btn btn-primary">LOG IN</button>
+    </form>
+
+    <!-- Divider -->
+    <div class="divider">or</div>
+
+    <!-- Google Login -->
+    <button class="btn btn-google" onclick="window.location='/auth/google'">
+      <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G">
+      Sign in with Google
+    </button>
+
+    <!-- Register -->
+    <div class="register">
+      Don't have an account yet? <a href="/register">CREATE ONE NOW</a>
+    </div>
+  </div>
+</body>
+</html>

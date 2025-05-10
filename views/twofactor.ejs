@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two-Step Authentication Setup</title>
+</head>
+<body>
+  <h1>Set up Two-Step Authentication</h1>
+  <p>Scan this QR code with Google Authenticator (or any TOTP app):</p>
+  <img src="<%= qr %>" alt="TOTP QR Code" />
+  <form action="/2fa/verify" method="POST">
+    <label>Enter code from app:</label>
+    <input name="token" required autofocus />
+    <button type="submit">Verify</button>
+  </form>
+</body>
+</html>
